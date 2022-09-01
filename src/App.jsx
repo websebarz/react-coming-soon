@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Counter from "./comps/Counter";
+import Header from "./comps/Header";
 import "./index.css";
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
     <>
-      <Counter />
+      <Header />
     </>
   );
 }
