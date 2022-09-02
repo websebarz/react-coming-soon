@@ -1,4 +1,22 @@
+import { useState } from "react";
+
 export default function About() {
+  const message = "Please provide a valid email";
+  const [isInvalid, setIsInvalid] = useState(false);
+  const isEmail = /^[a-zA-Z0-9]+@(?:[a-zA-Z0-9]+\.)+[A-Za-z]+$/;
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const { name } = event.target;
+
+    if (name.value.match(isEmail)) {
+      event.target.reset();
+      setIsInvalid(false);
+    } else {
+      setIsInvalid(true);
+    }
+  };
   return (
     <div className="relative max-w-md p-4 mt-16 text-center mr-auto ml-auto lg:mt-0">
       <h1 className="text-5xl tracking-widest lg:text-left text-6xl">
@@ -9,14 +27,22 @@ export default function About() {
         Add your email below to stay up-to-date with announcements and our
         launch deals.
       </p>
-      <form className="mt-8">
-        <input
-          type="email"
-          name="name"
-          placeholder="Email Address"
-          className="w-full p-4 px-6 rounded-full outline-secondary"
-          required={true}
-        />
+      <form onSubmit={handleSubmit} className="mt-8">
+        <div>
+          <input
+            type="text"
+            name="name"
+            placeholder="Email Address"
+            className="w-full p-4 px-6 rounded-full outline-secondary"
+            required={true}
+          />
+          {isInvalid && (
+            <img
+              className="absolute right-28 bottom-8 lg:absolute right-28 bottom-8"
+              src="../imgs/icon-error.svg"
+            />
+          )}
+        </div>
         <button
           type="submit"
           className="absolute w-[80px] h-[3.625em] right-4 bottom-4 bg-secondary rounded-full outline-none
@@ -31,6 +57,11 @@ export default function About() {
             />
           </svg>
         </button>
+        {isInvalid && (
+          <p className="text-secondary absolute left-8 mt-2 lg:absolute left-8 mt-2">
+            {message}
+          </p>
+        )}
       </form>
     </div>
   );

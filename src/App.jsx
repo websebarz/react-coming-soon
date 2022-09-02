@@ -9,7 +9,7 @@ function App() {
   return (
     <>
       {width > 1024 ? (
-        <div className="lg:h-[100vh] lg:grid grid-rows-1 grid-cols-2 bg-about-pattern bg-contain">
+        <div className="h-screen lg:grid grid-rows-1 grid-cols-2 bg-about-pattern bg-contain">
           <div className="lg:flex flex-col p-4 justify-around mr-auto ml-auto">
             <Header />
             <About />
@@ -17,7 +17,7 @@ function App() {
           <Hero />
         </div>
       ) : (
-        <div>
+        <div className="h-screen">
           <Header />
           <Hero />
           <About />
