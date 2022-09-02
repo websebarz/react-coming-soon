@@ -1,16 +1,4 @@
-import { useState } from "react";
-
 export default function About() {
-  const [email, setEmail] = useState("");
-
-  function onSubmit(e) {
-    e.preventDefault();
-  }
-
-  function submitEmail(e) {
-    setEmail(e.target.value);
-  }
-
   return (
     <div className="relative max-w-md p-4 mt-16 text-center mr-auto ml-auto lg:mt-0">
       <h1 className="text-5xl tracking-widest lg:text-left text-6xl">
@@ -21,7 +9,7 @@ export default function About() {
         Add your email below to stay up-to-date with announcements and our
         launch deals.
       </p>
-      <form className="mt-8" onChange={submitEmail}>
+      <form className="mt-8">
         <input
           type="email"
           name="name"
