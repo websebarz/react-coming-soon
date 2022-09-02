@@ -10,7 +10,7 @@ export default function About() {
   function submitEmail(e) {
     setEmail(e.target.value);
   }
-  console.log(email);
+
   return (
     <div className="relative max-w-md p-4 mt-16 text-center mr-auto ml-auto lg:mt-0">
       <h1 className="text-5xl tracking-widest lg:text-left text-6xl">
@@ -31,7 +31,7 @@ export default function About() {
         />
         <button
           type="submit"
-          className="absolute w-[80px] h-[3.725em] right-4 bottom-4 bg-secondary rounded-full outline-none
+          className="absolute w-[80px] h-[3.625em] right-4 bottom-4 bg-secondary rounded-full outline-none
            flex justify-center items-center shadow-lg hover:scale-110 duration-200 hover:bg-primary"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
