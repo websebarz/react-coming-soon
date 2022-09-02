@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <div className="relative max-w-sm p-4 mt-16 text-center mr-auto ml-auto">
-      <h1 className="text-5xl tracking-widest">
+    <div className="relative max-w-md p-4 mt-16 text-center mr-auto ml-auto lg:mt-0">
+      <h1 className="text-5xl tracking-widest lg:text-left text-6xl">
         <span className="font-light text-primary">WE'RE</span> COMING SOON
       </h1>
-      <p className="mt-6 text-primary">
+      <p className="mt-6 text-primary lg:text-left">
         Hello fellow shoppers! We're currently building our new fashion store.
         Add your email below to stay up-to-date with announcements and our
         launch deals.

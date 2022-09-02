@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <div className="p-8">
+    <div className="p-8 lg:max-h-[100px]">
       <svg xmlns="http://www.w3.org/2000/svg" width="158" height="33">
         <defs>
           <linearGradient id="a" x1="0%" y1="0%" y2="100%">
