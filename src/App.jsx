@@ -5,6 +5,7 @@ import "./index.css";
 
 function App() {
   let width = window.innerWidth;
+
   return (
     <>
       {width > 1024 ? (
