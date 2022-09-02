@@ -9,7 +9,11 @@ module.exports = {
       primary: "#c08080",
       secondary: "#F47174",
     },
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "about-pattern": "url('./imgs/bg-pattern-desktop.svg')",
+      },
+    },
   },
   plugins: [],
 };

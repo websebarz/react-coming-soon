@@ -19,7 +19,7 @@ export default function About() {
         <button
           type="submit"
           className="absolute w-[80px] h-[3.725em] right-4 bottom-4 bg-secondary rounded-full
-           flex justify-center items-center shadow-lg"
+           flex justify-center items-center shadow-lg hover:scale-110 duration-200 hover:bg-primary"
         >
           <svg xmlns="http://www.w3.org/2000/svg" width="12" height="20">
             <path
